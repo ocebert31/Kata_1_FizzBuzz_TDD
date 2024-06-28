@@ -16,7 +16,7 @@ function fizzBuzz() {
     for (let i = 0; i < 100; i ++) {
         if (i % 3 === 0) {
             numbers.push('Fizz')
-        } else if (i === 5) {
+        } else if (i % 5 === 0) {
             numbers.push('Buzz');
         } else {
             numbers.push(i);
@@ -39,4 +39,8 @@ assert('6 become Fizz', () => {
 
 assert('5 become Buzz', () => {
     return fizzBuzz()[5] === 'Buzz';
+})
+
+assert('10 become Buzz', () => {
+    return fizzBuzz()[10] === 'Buzz';
 })
