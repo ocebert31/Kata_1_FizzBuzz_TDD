@@ -14,7 +14,7 @@ function assert(label, test) {
 function fizzBuzz() {
     let numbers = [];
     for (let i = 0; i < 100; i ++) {
-        if (i === 3) {
+        if (i % 3 === 0) {
             numbers.push('Fizz')
         } else {
             numbers.push(i);
