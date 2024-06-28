@@ -44,3 +44,7 @@ assert('5 become Buzz', () => {
 assert('10 become Buzz', () => {
     return fizzBuzz()[10] === 'Buzz';
 })
+
+assert('15 become FizzBuzz', () => {
+    return fizzBuzz()[15] === 'FizzBuzz';
+})
