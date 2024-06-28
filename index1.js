@@ -14,7 +14,7 @@ function assert(label, test) {
 function fizzBuzz() {
     let numbers = [];
     for (let i = 0; i < 100; i ++) { 
-        if (i === 15) {
+        if (i % 3 === 0 && i % 5 === 0) {
             numbers.push('FizzBuzz');
         } else if (i % 3 === 0) {
             numbers.push('Fizz');
@@ -49,4 +49,8 @@ assert('10 become Buzz', () => {
 
 assert('15 become FizzBuzz', () => {
     return fizzBuzz()[15] === 'FizzBuzz';
+})
+
+assert('30 become FizzBuzz', () => {
+    return fizzBuzz()[30] === 'FizzBuzz';
 })
