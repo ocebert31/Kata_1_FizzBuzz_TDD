@@ -30,3 +30,7 @@ assert('show first 100 numbers', () => {
 assert('3 become Fizz', () => {
     return fizzBuzz()[3] === 'Fizz';
 })
+
+assert('6 become Fizz', () => {
+    return fizzBuzz()[6] === 'Fizz';
+})
