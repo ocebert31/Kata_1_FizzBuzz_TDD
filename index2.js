@@ -16,8 +16,9 @@ function assert(label, test) {
 function fizzBuzz() {
     let numbers = [];
     for (let i = 0; i < 100; i ++) {
-        fizz(numbers, i)
-        defaultNumber(numbers, i)
+        fizz(numbers, i);
+        buzz(numbers, i);
+        defaultNumber(numbers, i);
     }
     return numbers;
 }
@@ -28,8 +29,14 @@ function fizz(numbers, i) {
     }
 }
 
+function buzz(numbers, i) {
+    if (i === 5) {
+        numbers.push('Buzz');
+    }
+}
+
 function defaultNumber(numbers, i) {
-    if (i % 3 !== 0) {
+    if (i % 3 !== 0 && i !== 5) {
         numbers.push(i);
     }
 }
@@ -45,4 +52,8 @@ assert('3 become Fizz', () => {
 
 assert('6 become Fizz', () => {
     return fizzBuzz()[6] === 'Fizz';
+});
+
+assert('5 become Buzz', () => {
+    return fizzBuzz()[5] === 'Buzz';
 });
