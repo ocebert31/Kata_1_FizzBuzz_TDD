@@ -16,19 +16,33 @@ function assert(label, test) {
 function fizzBuzz() {
     let numbers = [];
     for (let i = 0; i < 100; i ++) {
+        fizz(numbers, i)
         defaultNumber(numbers, i)
     }
     return numbers;
 }
 
+function fizz(numbers, i) {
+    if (i % 3 === 0) {
+        numbers.push('Fizz');
+    }
+}
+
 function defaultNumber(numbers, i) {
-    numbers.push(i);
+    if (i % 3 !== 0) {
+        numbers.push(i);
+    }
 }
 
 assert('show first 100 numbers', () => {
+    console.log(fizzBuzz())
     return fizzBuzz().length === 100;
 });
 
 assert('3 become Fizz', () => {
     return fizzBuzz()[3] === 'Fizz';
+});
+
+assert('6 become Fizz', () => {
+    return fizzBuzz()[6] === 'Fizz';
 });
