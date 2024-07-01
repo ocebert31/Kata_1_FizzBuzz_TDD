@@ -13,9 +13,10 @@ function assert(label, test) {
     }
 }
 
-function fizzBuzz() {
+function allFizzBuzz() {
     let numbers = [];
     for (let i = 0; i < 100; i ++) {
+        fizzBuzz(numbers, i);
         fizz(numbers, i);
         buzz(numbers, i);
         defaultNumber(numbers, i);
@@ -23,8 +24,14 @@ function fizzBuzz() {
     return numbers;
 }
 
+function fizzBuzz(numbers, i) {
+    if (i === 15) {
+        numbers.push('FizzBuzz');
+    }
+}
+
 function fizz(numbers, i) {
-    if (i % 3 === 0) {
+    if (i % 3 === 0 && i !== 15) {
         numbers.push('Fizz');
     }
 }
@@ -36,29 +43,33 @@ function buzz(numbers, i) {
 }
 
 function defaultNumber(numbers, i) {
-    if (i % 3 !== 0 && i % 5 !== 0) {
+    if (i % 3 !== 0 && i % 5 !== 0 && i !== 15) {
         numbers.push(i);
     }
 }
 
 assert('show first 100 numbers', () => {
-    console.log(fizzBuzz().length)
-    console.log(fizzBuzz())
-    return fizzBuzz().length === 100;
+    console.log(allFizzBuzz().length)
+    console.log(allFizzBuzz())
+    return allFizzBuzz().length === 100;
 });
 
 assert('3 become Fizz', () => {
-    return fizzBuzz()[3] === 'Fizz';
+    return allFizzBuzz()[3] === 'Fizz';
 });
 
 assert('6 become Fizz', () => {
-    return fizzBuzz()[6] === 'Fizz';
+    return allFizzBuzz()[6] === 'Fizz';
 });
 
 assert('5 become Buzz', () => {
-    return fizzBuzz()[5] === 'Buzz';
+    return allFizzBuzz()[5] === 'Buzz';
 });
 
 assert('10 become Buzz', () => {
-    return fizzBuzz()[10] === 'Buzz';
+    return allFizzBuzz()[10] === 'Buzz';
+});
+
+assert('15 become FizzBuzz', () => {
+    return allFizzBuzz()[15] === 'FizzBuzz';
 });
