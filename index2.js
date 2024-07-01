@@ -12,3 +12,15 @@ function assert(label, test) {
         console.log(`${label} ❌`)
     }
 }
+
+function fizzBuzz() {
+    let numbers = [];
+    for (let i = 0; i < 100; i ++) {
+        numbers.push(i);
+    }
+    return numbers;
+}
+
+assert('show first 100 numbers', () => {
+    return fizzBuzz().length === 100;
+})
