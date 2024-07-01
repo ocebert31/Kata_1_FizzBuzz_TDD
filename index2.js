@@ -25,13 +25,13 @@ function allFizzBuzz() {
 }
 
 function fizzBuzz(numbers, i) {
-    if (i === 15) {
+    if (i % 3 === 0 && i % 5 === 0) {
         numbers.push('FizzBuzz');
     }
 }
 
 function fizz(numbers, i) {
-    if (i % 3 === 0 && i !== 15) {
+    if (i % 3 === 0 && i % 5 !== 0) {
         numbers.push('Fizz');
     }
 }
@@ -43,7 +43,7 @@ function buzz(numbers, i) {
 }
 
 function defaultNumber(numbers, i) {
-    if (i % 3 !== 0 && i % 5 !== 0 && i !== 15) {
+    if (i % 3 !== 0 && i % 5 !== 0) {
         numbers.push(i);
     }
 }
@@ -72,4 +72,8 @@ assert('10 become Buzz', () => {
 
 assert('15 become FizzBuzz', () => {
     return allFizzBuzz()[15] === 'FizzBuzz';
+});
+
+assert('30 become FizzBuzz', () => {
+    return allFizzBuzz()[30] === 'FizzBuzz';
 });
