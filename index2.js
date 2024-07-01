@@ -49,8 +49,6 @@ function defaultNumber(numbers, i) {
 }
 
 assert('show first 100 numbers', () => {
-    console.log(allFizzBuzz().length)
-    console.log(allFizzBuzz())
     return allFizzBuzz().length === 100;
 });
 
