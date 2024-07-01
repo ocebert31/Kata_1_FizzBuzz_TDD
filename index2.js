@@ -30,18 +30,19 @@ function fizz(numbers, i) {
 }
 
 function buzz(numbers, i) {
-    if (i === 5) {
+    if (i % 5 === 0 && i % 3 !== 0) {
         numbers.push('Buzz');
     }
 }
 
 function defaultNumber(numbers, i) {
-    if (i % 3 !== 0 && i !== 5) {
+    if (i % 3 !== 0 && i % 5 !== 0) {
         numbers.push(i);
     }
 }
 
 assert('show first 100 numbers', () => {
+    console.log(fizzBuzz().length)
     console.log(fizzBuzz())
     return fizzBuzz().length === 100;
 });
@@ -56,4 +57,8 @@ assert('6 become Fizz', () => {
 
 assert('5 become Buzz', () => {
     return fizzBuzz()[5] === 'Buzz';
+});
+
+assert('10 become Buzz', () => {
+    return fizzBuzz()[10] === 'Buzz';
 });
