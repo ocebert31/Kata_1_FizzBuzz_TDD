@@ -1,5 +1,9 @@
-const sum = require('../src/fizzbuzz');
+const fizzBuzz = require('../src/fizzbuzz');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('display hundred frist numbers', () => {
+  expect(fizzBuzz().length).toBe(100);
+});
+
+test('3 become fizz', () => {
+  expect(fizzBuzz()[3]).toBe('fizz');
 });

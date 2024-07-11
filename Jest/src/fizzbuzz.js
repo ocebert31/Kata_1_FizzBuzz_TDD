@@ -1,4 +1,14 @@
-function sum(a, b) {
-    return a + b;
+// 100 premiers nombres
+// multiple 3 => fizz
+// multiple 5 => buzz
+// multiple 3 ET 5 => fizzbuzz
+
+function fizzBuzz() {
+  const numbers = [];
+  for (let i = 0; i < 100; i ++ ) {
+    numbers.push(i);
   }
-  module.exports = sum;
+  return numbers;
+}
+
+module.exports = fizzBuzz;
