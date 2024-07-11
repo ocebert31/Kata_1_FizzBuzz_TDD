@@ -23,3 +23,7 @@ test('10 become buzz', () => {
 test('15 become fizzbuzz', () => {
   expect(fizzBuzz()[15]).toBe('fizzbuzz');
 });
+
+test('30 become fizzbuzz', () => {
+  expect(fizzBuzz()[30]).toBe('fizzbuzz');
+});
