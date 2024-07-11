@@ -11,3 +11,11 @@ test('3 become fizz', () => {
 test('6 become fizz', () => {
   expect(fizzBuzz()[6]).toBe('fizz');
 });
+
+test('5 become buzz', () => {
+  expect(fizzBuzz()[5]).toBe('buzz');
+});
+
+test('10 become buzz', () => {
+  expect(fizzBuzz()[10]).toBe('buzz');
+});
