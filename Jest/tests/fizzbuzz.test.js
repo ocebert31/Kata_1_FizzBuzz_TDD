@@ -19,3 +19,7 @@ test('5 become buzz', () => {
 test('10 become buzz', () => {
   expect(fizzBuzz()[10]).toBe('buzz');
 });
+
+test('15 become fizzbuzz', () => {
+  expect(fizzBuzz()[15]).toBe('fizzbuzz');
+});
