@@ -7,3 +7,7 @@ test('display hundred frist numbers', () => {
 test('3 become fizz', () => {
   expect(fizzBuzz()[3]).toBe('fizz');
 });
+
+test('6 become fizz', () => {
+  expect(fizzBuzz()[6]).toBe('fizz');
+});

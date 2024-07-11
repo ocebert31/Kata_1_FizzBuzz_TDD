@@ -6,7 +6,11 @@
 function fizzBuzz() {
   const numbers = [];
   for (let i = 0; i < 100; i ++ ) {
-    numbers.push(i);
+    if (i % 3 === 0) {
+      numbers.push('fizz');
+    } else {
+      numbers.push(i);
+    }
   }
   return numbers;
 }
